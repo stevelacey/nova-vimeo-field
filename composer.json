@@ -1,6 +1,6 @@
 {
-    "name": "tanjemark/nova-vimeo-field",
-    "description": "A Laravel Nova field.",
+    "name": "stevelacey/nova-vimeo-field",
+    "description": "A Laravel Nova Vimeo field.",
     "keywords": [
         "laravel",
         "nova",
@@ -13,13 +13,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Tanjemark\\Fields\\": "src/"
+            "Steve\\NovaVimeoField\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Tanjemark\\Fields\\FieldServiceProvider"
+                "Steve\\NovaVimeoField\\FieldServiceProvider"
             ]
         }
     },

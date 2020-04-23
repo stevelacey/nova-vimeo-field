@@ -1,6 +1,6 @@
 <?php
 
-namespace Tanjemark\Fields;
+namespace Steve\NovaVimeoField;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\ServingNova;
@@ -16,8 +16,7 @@ class FieldServiceProvider extends ServiceProvider
     public function boot()
     {
         Nova::serving(function (ServingNova $event) {
-            Nova::script('vimeo', __DIR__.'/../dist/js/field.js');
-            Nova::style('vimeo', __DIR__.'/../dist/css/field.css');
+            Nova::script('vimeo', __DIR__ . '/../dist/js/field.js');
         });
     }
 

@@ -1,30 +1,29 @@
-# Nova Vimeo Field
+# Laravel Nova Vimeo Field
 
+[![Packagist License](https://poser.pugx.org/stevelacey/nova-vimeo-field/license.png)](http://choosealicense.com/licenses/mit/)
+[![Latest Stable Version](https://poser.pugx.org/stevelacey/nova-vimeo-field/version.png)](https://packagist.org/packages/stevelacey/nova-vimeo-field)
+[![Total Downloads](https://poser.pugx.org/stevelacey/nova-vimeo-field/d/total.png)](https://packagist.org/packages/stevelacey/nova-vimeo-field)
 
-![Vimeo player](./docs/vimeo_player.png)
+Laravel Nova Vimeo field stores the id out of any given Vimeo link/embed, and renders a player.
+
+![Vimeo player](https://raw.githubusercontent.com/stevelacey/nova-vimeo-field/master/screenshot.png)
 
 ## Installation
 
-You can install the package in to a Laravel app that uses Nova via composer:
 ```bash
-composer require tanjemark/nova-vimeo-field
+composer require stevelacey/nova-vimeo-field
 ```
 
 ## Usage
+
+Define the following fields in your resource in the `fields` method:
+
 ```php
-use Tanjemark\Fields\Vimeo;
+use Steve\NovaVimeoField\Vimeo;
 
-Vimeo::make('Vimeo field name'),
-```
-The field extends the base Laravel\Nova\Fields\Field, so all the usual methods are available.
+...
 
-## Options
-
-### With meta
-```php
-use Tanjemark\Fields\Vimeo;
-
-Vimeo::make('Vimeo field name')
+Vimeo::make('Video')
     ->withMeta([
         'options' => [
             'width' => 640,
@@ -32,7 +31,3 @@ Vimeo::make('Vimeo field name')
         ]
     ]);
 ```
-
-## License
-The MIT License (MIT). Please see [License File](LICENSE) for more information.
-
